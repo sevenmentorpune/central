@@ -1,0 +1,12 @@
+-
+ name: create directory
+ hosts: all
+ become: yes
+ tasks:
+   - name: create directory on all system
+     file:
+       path: /home/ansibledir
+       state: directory
+       owner: root
+       group: root
+       mode: '0777'
